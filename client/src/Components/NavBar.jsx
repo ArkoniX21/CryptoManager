@@ -9,9 +9,14 @@ const NavBar = () => {
     return (
         <Navbar bg='dark' fixed='top'>
             <Container>
-            <Nav.Link href="/" bsStyle="default" style={{color:"white"}} className='' >WINX</Nav.Link>
-            <Button variant='outline-light'>Войти</Button>
-            <Button variant='outline-light'>Попробовать бесплатно</Button>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+            <Navbar.Brand href="/" bsStyle="default" style={{color:"white"}} className=''>WINX</Navbar.Brand>
+            </Nav>
+            <Button href='/login' variant='outline-light'>Войти</Button>
+            <Button href='/reg' variant='outline-light' className='ms-2'>Попробовать бесплатно</Button>
+            </Navbar.Collapse>
             </Container>
         </Navbar>
     );
