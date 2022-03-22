@@ -1,12 +1,17 @@
 const axios = require("axios");
 
 let data = {
-    username: "Kirill",
-    email: "kirill123@mail.ru",
+    email: "akimin97@mail.ru",
     password: "123123"
 }
 
-axios.post('http://localhost:3000/api/user', {
+// axios.post('http://localhost:5000/api/register', {
+//     data
+// }).then(function (response) {
+//     console.log(response);
+// })
+
+axios.post('http://localhost:5000/api/login', {
     data
 }).then(function (response) {
     console.log(response);
