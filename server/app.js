@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const User = require('./models/User');
 
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 app.use(express.json());
 
 mongoose.connect('mongodb://127.0.0.1:27017/usersdb', { useUnifiedTopology: true, useNewUrlParser: true }, 
@@ -31,6 +31,8 @@ app.get('/api/users', (req, res) => {
 });
 
 app.post('/api/user', (req, res) => {
+    if(!req.body) return res.sendStatus(400);
+
     let data = req.body.data;
     createUser(data.username, data.email, data.password);
     res.send("HEllo")
