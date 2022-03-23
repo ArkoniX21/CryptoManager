@@ -3,10 +3,19 @@ import Container from 'react-bootstrap/esm/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { Button } from 'react-bootstrap';
+import SideBar from './SideBar';
 
+const options = [
+    {
+        name: 'Enable both scrolling & backdrop',
+        scroll: true,
+        backdrop: true,
+    }
+]
 
 const NavBar = () => {
     return (
+        <div>
         <Navbar bg='dark' fixed='top'>
             <Container>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -19,6 +28,8 @@ const NavBar = () => {
             </Navbar.Collapse>
             </Container>
         </Navbar>
+        </div>
+        
     );
 };
 

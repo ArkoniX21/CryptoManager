@@ -6,12 +6,13 @@ import Col from 'react-bootstrap/Col'
 import NavBar from './Components/NavBar';
 import MainPage from './Pages/MainPage';
 import {BrowserRouter} from 'react-router-dom';
+import SideBar from './Components/SideBar';
 
 const App = () => {
   return (
     <div>
+    <SideBar />
     <NavBar />
-    <MainPage />
     </div>
   );
 };
