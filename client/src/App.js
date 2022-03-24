@@ -10,10 +10,10 @@ import SideBar from './Components/SideBar';
 
 const App = () => {
   return (
-    <div>
-    <SideBar />
+    <BrowserRouter>
     <NavBar />
-    </div>
+    <MainPage />
+    </BrowserRouter>
   );
 };
 

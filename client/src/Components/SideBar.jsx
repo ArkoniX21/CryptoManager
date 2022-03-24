@@ -10,16 +10,17 @@ const options = [
     },
   ];
 function SideBarLog ({name, ...props}) {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
         <div>
-            <Button variant="outline-light" onClick={handleShow} className="mt-50">
+            <Button variant="outline-dark" onClick={handleShow} className="">
                 Меню
             </Button>
 
             <Offcanvas show = {show} onHide={handleClose}>
+            <Offcanvas.Title className='d-flex justify-content-center align-center'>Меню</Offcanvas.Title>
                 <Offcanvas.Header closeButton>
                     <Offcanvas> SideBar</Offcanvas>
                 </Offcanvas.Header>
